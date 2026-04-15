@@ -11,3 +11,4 @@ tools/nsf2data
 tools/text2data
 .cache
 compile_commands.json
+bin

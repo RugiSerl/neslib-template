@@ -1,5 +1,7 @@
 PROJECT_NAME = Template
 ROM = $(PROJECT_NAME).nes
+BUILD_DIR = bin
+TARGET = $(BUILD_DIR)/$(ROM)
 
 CC65_ROOT = tools/cc65
 CC = $(CC65_ROOT)/bin/cc65
@@ -15,14 +17,16 @@ SRC = main.c
 ASMSRC = neslib/crt0.s
 OBJS = $(ASMSRC:.s=.o) $(SRC:.c=.o) chr_rom.o
 
-$(ROM): ld65.cfg $(OBJS)
+$(TARGET): ld65.cfg $(OBJS) mkdir_build
 	$(LD) -C ld65.cfg $(OBJS) nes.lib -m link.log -o $@
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(ROM)
+	rm -rf $(BUILD_DIR)
 	rm -f *.chr
 	rm -f link.log
+
+mkdir_build:
+	if [ ! -d "$(BUILD_DIR)" ]; then mkdir $(BUILD_DIR) ; fi 
 
 submodules:
 	git submodule update --init --recursive
