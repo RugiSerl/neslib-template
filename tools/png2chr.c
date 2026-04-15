@@ -1,5 +1,6 @@
 #include <png.h>
 #include "common.h"
+#include <string.h>
 
 static u8 pixel(const u8 * const data, const u32 x, const u32 y, const u32 w) {
 

@@ -37,3 +37,6 @@ chr_rom.o: tiles.chr sprites.chr
 
 # Cancel built in rule for .c files.
 %.o: %.c
+
+run: $(ROM)
+	fceux $(ROM)

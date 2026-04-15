@@ -1,0 +1,18 @@
+CompileFlags:
+  Remove: 
+    - --add-source
+    - -Oirs
+    - -t*
+    - -target
+  Add:
+    - --target=i386-pc-linux-gnu
+    - -D__NES__
+    - -Itools/cc65/include
+    - "-D__near__="
+    - "-D__far__="
+    - "-D__fastcall__="
+    - "-D__extcall__="
+    - "-D__rodata__="
+    - "-D__reentrant__="
+    - "-D__attribute__(x)="
+    - "-D__6502__=1"

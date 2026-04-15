@@ -1,4 +1,4 @@
-#include <stdbool.h>
+
 #include <stdint.h>
 #include <string.h>
 
@@ -40,6 +40,7 @@ void main (void) {
 	
 	// Clear the sprite memory.
 	oam_clear();
+	
 	
 	// Turn off the PPU to make batch uploads to VRAM.
 	ppu_off(); {
@@ -84,7 +85,7 @@ void main (void) {
 	music_play(0);
 	
 	// Main loop.
-	while(true){
+	while(1){
 		// Read the first player gamepad.
 		joy0 = joy_read(0);
 		

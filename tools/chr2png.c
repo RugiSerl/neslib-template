@@ -2,6 +2,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include "common.h"
+#include <string.h>
 
 static void savepng(FILE *f, const u8 * const data, const u32 tiles) {
 
