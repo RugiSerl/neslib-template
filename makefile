@@ -24,6 +24,18 @@ clean:
 	rm -f *.chr
 	rm -f link.log
 
+submodules:
+	git submodule update --init --recursive
+
+build_cc65: submodules
+	pushd tools/cc65; make; popd
+
+build_tools:
+	pushd tools; make; popd
+
+setup: build_cc65 build_tools
+
+
 %.s: %.c
 	$(CC) $(CFLAGS) $< --add-source -I $(INCLUDE) -o $@
 
