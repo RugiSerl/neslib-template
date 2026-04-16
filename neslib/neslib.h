@@ -36,6 +36,7 @@
 
 
 // set bg and spr palettes, data is 32 bytes array
+#include <cstddef>
 void __fastcall__ pal_all(const char *data);
 
 // set bg palette only, data is 16 bytes array
@@ -271,7 +272,6 @@ void __fastcall__ oam_meta_spr_clip(signed int x,unsigned char y,const unsigned 
 #define NAMETABLE_C		0x2800
 #define NAMETABLE_D		0x2c00
 
-#define NULL			0
 #define TRUE			1
 #define FALSE			0
 
