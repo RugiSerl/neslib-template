@@ -1,0 +1,32 @@
+name: Ubuntu
+
+on:
+  push:
+    branches: [ main ]
+    
+  pull_request:
+    branches: [ main ]
+    
+jobs:    
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: update apt
+      run: sudo apt-get update
+
+    - name: make setup
+      run: make setup
+
+    - name: make
+      run: make
+
+    - name: 'export binary'
+      uses: actions/upload-artifact@v4
+      with:
+          name: app
+          path: bin/Template.nes
+
+    - name: make clean
+      run: make clean
