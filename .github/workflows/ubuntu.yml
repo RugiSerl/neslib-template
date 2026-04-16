@@ -16,9 +16,6 @@ jobs:
     - name: update apt
       run: sudo apt-get update
 
-    - name: get dependencies
-      run: sudo apt install pushd popd
-
     - name: make setup
       run: make setup
 

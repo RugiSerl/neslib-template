@@ -36,10 +36,10 @@ submodules:
 	git submodule update --init --recursive
 
 build_cc65: submodules
-	pushd tools/cc65; make; popd
+	$(MAKE) -C tools/cc65
 
 build_tools:
-	pushd tools; make; popd
+	$(MAKE) -C tools
 
 setup: build_cc65 build_tools
 
