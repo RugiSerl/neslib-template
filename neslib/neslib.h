@@ -36,7 +36,6 @@
 
 
 // set bg and spr palettes, data is 32 bytes array
-#include <cstddef>
 void __fastcall__ pal_all(const char *data);
 
 // set bg palette only, data is 16 bytes array
