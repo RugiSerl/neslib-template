@@ -4,7 +4,7 @@
 
 #include <joystick.h>
 #include <nes.h>
-#include "neslib/neslib.h"
+#include "neslib.h"
 
 uint8_t i, ix, iy;
 uint8_t joy0;
