@@ -28,7 +28,7 @@ jobs:
     - name: 'export binary'
       uses: actions/upload-artifact@v4
       with:
-          name: app
+          name: exported
           path: bin/Template.nes
 
     - name: make clean
