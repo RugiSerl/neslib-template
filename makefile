@@ -57,5 +57,5 @@ $(BUILD_DIR)/chr_rom.o: $(BUILD_DIR)/tiles.chr $(BUILD_DIR)/sprites.chr
 	cp $(ASSETS_DIR)/chr_rom.s $(BUILD_DIR)/chr_rom.s
 	$(AS) $(BUILD_DIR)/chr_rom.s -o $@
 
-run: $(ROM)
-	fceux $(ROM)
+run: $(TARGET)
+	fceux $(TARGET)
