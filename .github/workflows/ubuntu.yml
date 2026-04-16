@@ -16,6 +16,9 @@ jobs:
     - name: update apt
       run: sudo apt-get update
 
+    - name: get dependencies
+      run: sudo apt install libpng
+
     - name: make setup
       run: make setup
 
