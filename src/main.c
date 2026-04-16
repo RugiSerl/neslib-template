@@ -1,6 +1,4 @@
-
 #include <stdint.h>
-#include <string.h>
 
 #include <joystick.h>
 #include <nes.h>

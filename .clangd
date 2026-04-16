@@ -16,3 +16,5 @@ CompileFlags:
     - "-D__reentrant__="
     - "-D__attribute__(x)="
     - "-D__6502__=1"
+Diagnostics:
+  Suppress: [array_incomplete_or_sizeless_type]
